@@ -1,0 +1,72 @@
+# index
+GET http://localhost:3001/v1/log_nfs_pref_gyn?_page=1&_limit=1 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# show
+GET http://localhost:3001/v1/log_nfs_pref_gyn/f8c00dcf-9a12-4dc6-8c8a-4b4a813ddfd7 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# store
+POST http://localhost:3001/v1/log_nfs_pref_gyn HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "federalRegistration": "22222222000244",
+    "idAccessPortals": "8ed88420-4491-444d-ae6e-84d588816119",
+    "cityRegistration": "12356",
+    "nameCompanie": "",
+    "dateStartDown": "2021-01-10",
+    "dateEndDown": "2021-01-31",
+    "typeLog": "processing",
+    "messageLog": "ok",
+    "messageLogToShowUser": "ok",
+    "messageError": "",
+    "qtdNotesDown": 0,
+    "qtdTimesReprocessed": 0
+}
+
+###
+
+# destroy
+DELETE http://localhost:3001/v1/log_nfs_pref_gyn/781e024c-2e25-44b3-98f4-7e98ce008502 HTTP/1.1
+tenant: 96c6f0ba-8310-4
+
+###
+
+# update
+PUT http://localhost:3001/v1/log_nfs_pref_gyn/781e024c-2e25-44b3-98f4-7e98ce008502 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "idAccessPortals": "62839343-3c36-4dbc-b7bb-7fead669a394",
+    "federalRegistration": "22222222000244",
+    "cityRegistration": "123456",
+    "nameCompanie": "",
+    "dateStartDown": "2021-01-10",
+    "dateEndDown": "2021-01-31",
+    "typeLog": "processing",
+    "messageLog": "ok 2",
+    "messageLogToShowUser": "ok",
+    "messageError": "",
+    "qtdNotesDown": 0,
+    "qtdTimesReprocessed": 0
+}
+
+###
+
+# upload_print_log
+PATCH http://localhost:3001/v1/log_nfs_pref_gyn/f8c00dcf-9a12-4dc6-8c8a-4b4a813ddfd7/upload_print_log HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "bufferImage": ""
+}

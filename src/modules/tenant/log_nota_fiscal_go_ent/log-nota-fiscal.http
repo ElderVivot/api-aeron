@@ -1,0 +1,99 @@
+# index
+GET http://localhost:3001/v1/log_nota_fiscal_go_ent HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# indexToFront
+GET http://localhost:3001/v1/log_nota_fiscal_go_ent/frontend HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# getCompaniesThatDontProcessNotaFiscalYet
+GET http://localhost:3001/v1/log_nota_fiscal_go_ent/get_companies_that_dont_process_yet?idCompanieList=5a059637-7147-4cb9-a915-7ac69967e870,722ab91b-3f4e-42eb-886d-0c007136aa67&dateStartDownBetween=2023-01-01&dateEndDownBetween=2023-01-31 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# show
+GET http://localhost:3001/v1/log_nota_fiscal_go_ent/f8c00dcf-9a12-4dc6-8c8a-4b4a813ddfd7 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# store
+POST http://localhost:3001/v1/log_nota_fiscal_go_ent HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "federalRegistration": "22222222000244",
+    "idAccessPortals": "4613c4dc-82c3-4603-b12d-e9a062cc8770",
+    "dateStartDown": "2021-01-10",
+    "dateEndDown": "2021-01-31",
+    "typeLog": "processing",
+    "messageLog": "ok",
+    "messageLogToShowUser": "ok",
+    "messageError": "",
+    "qtdNotesDown": 0,
+    "qtdTimesReprocessed": 0,
+    "pageInicial": 0,
+    "pageFinal": 0,
+    "qtdPagesTotal": 1,
+    "urlPrintLog": ""
+}
+
+###
+
+# destroy
+DELETE http://localhost:3001/v1/log_nota_fiscal_go_ent/4c3ce9c6-68cf-4892-86bd-4d99cb171929 HTTP/1.1
+tenant: 96c6f0ba-8310-4
+
+###
+
+# update
+PUT http://localhost:3001/v1/log_nota_fiscal_go_ent/80228881-1de4-4d6c-895e-e1399e3fae4b HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "idCompanie": "bff71ec2-c27d-4aaa-a7ec-c203948ad568",
+    "modelNotaFiscal": "55",
+    "dateStartDown": "2021-02-01T06:00:00.000Z",
+    "dateEndDown": "2021-02-28",
+    "typeLog": "processing",
+    "messageLog": "ok 2",
+    "messageLogToShowUser": "ok",
+    "messageError": "",
+    "qtdNotesDown": 0,
+    "qtdTimesReprocessed": 0,
+    "pageInicial": 0,
+    "pageFinal": 0,
+    "qtdPagesTotal": 1
+}
+
+###
+
+# upload_print_log
+PATCH http://localhost:3001/v1/log_nota_fiscal_go_ent/f8c00dcf-9a12-4dc6-8c8a-4b4a813ddfd7/upload_print_log HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "bufferImage": ""
+}
+
+
+# Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="file"; filename="2.png"
+# Content-Type: image/png
+
+# < ./1.png
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW--

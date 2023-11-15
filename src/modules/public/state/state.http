@@ -1,0 +1,36 @@
+# index
+GET http://localhost:3001/v1/state?name=Goi&acronym=GO HTTP/1.1
+content-type: application/json
+
+###
+
+# show
+GET http://localhost:3001/v1/state/1 HTTP/1.1
+content-type: application/json
+
+###
+
+# store
+POST http://localhost:3001/v1/state HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Goiás",
+    "acronym": "GO"
+}
+
+###
+
+# destroy
+DELETE http://localhost:3001/v1/state/21 HTTP/1.1
+
+###
+
+# update
+PUT http://localhost:3001/v1/state/21 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "GOIaS",
+    "acronym": "GO"
+}

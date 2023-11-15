@@ -1,0 +1,9 @@
+# index
+GET http://localhost:3001/v1/clients_resume?competence=2023-06-01 HTTP/1.1
+content-type: application/json
+
+###
+
+# indexQtdRecordsInAnyTable
+GET http://localhost:3001/v1/clients_resume/show_qtd_records_in_any_table/companie HTTP/1.1
+content-type: application/json

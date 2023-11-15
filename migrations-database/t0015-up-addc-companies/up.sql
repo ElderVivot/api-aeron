@@ -1,0 +1,8 @@
+BEGIN;
+
+ALTER TABLE $1:name.companie 
+    ADD COLUMN "employeesActive" INTEGER DEFAULT 0,
+    ADD COLUMN "employersActive" INTEGER DEFAULT 0,
+    ADD COLUMN "qtdEventsS1000" INTEGER DEFAULT 0;
+
+COMMIT;

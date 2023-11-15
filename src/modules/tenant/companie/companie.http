@@ -1,0 +1,82 @@
+# index
+GET http://localhost:3001/v1/companie?typeFederalRegistration=cnpj&existEmployees=1 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# index
+GET http://localhost:3001/v1/companie/get_list_idCompanie HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# show
+GET http://localhost:3001/v1/companie/17c027f9-e527-4fb6-8924-61c45b083577 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# store
+POST http://localhost:3001/v1/companie HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "codeCompanieAccountSystem": "3",
+    "name": "VIVOT SOFTWARE 2",
+    "nickName": "SOFTWARE 2",
+    "typeFederalRegistration": "cnpj",
+    "federalRegistration": "22222222000344",
+    "stateRegistration": "ISENTO",
+    "cityRegistration": "1234",
+    "dddPhone": 62,
+    "phone": "3333333",
+    "email": "software@mail.com",
+    "idIbgeCity": 520008,
+    "neighborhood": "",
+    "street": "",
+    "zipCode": "",
+    "complement": "",
+    "referency": "",
+    "dateInicialAsCompanie": "2010-01-01",
+    "dateInicialAsClient": "2020-01-01",
+    "dateFinalAsClient": null,
+    "cnaes": "6201501,6201502",
+    "taxRegime": "01"
+}
+
+###
+
+# destroy
+DELETE http://localhost:3001/v1/companie/854f5d51-01ed-4609-9126-d6fe3e9afb18 HTTP/1.1
+tenant: 96c6f0ba-8310-4
+
+###
+
+# update
+PUT http://localhost:3001/v1/companie/17c027f9-e527-4fb6-8924-61c45b083577 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "codeCompanieAccountSystem": "2",
+    "name": "VIVOT SOFTWARE 22",
+    "nickName": "SOFTWARE 2",
+    "typeFederalRegistration": "cnpj",
+    "federalRegistration": "22222222000244",
+    "dddPhone": 62,
+    "phone": "3333333",
+    "email": "software2@mail.com",
+    "idIbgeCity": 520008,
+    "neighborhood": "",
+    "street": "",
+    "zipCode": "",
+    "complement": "",
+    "referency": "",
+    "dateInicialAsCompanie": "2010-01-01",
+    "dateInicialAsClient": "2020-01-01",
+    "dateFinalAsClient": "2021-10-01"
+}

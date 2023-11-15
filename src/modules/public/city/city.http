@@ -1,0 +1,38 @@
+# index
+GET http://localhost:3001/v1/city HTTP/1.1
+content-type: application/json
+
+###
+
+# show
+GET http://localhost:3001/v1/city/9 HTTP/1.1
+content-type: application/json
+
+###
+
+# upsert
+POST http://localhost:3001/v1/city HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Goiânia",
+    "acronymState": "GO",
+    "idIbge": 520008
+}
+
+###
+
+# destroy
+DELETE http://localhost:3001/v1/city/11 HTTP/1.1
+
+###
+
+# update
+PUT http://localhost:3001/v1/city/10 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "GoiâniA",
+    "acronymState": "GO",
+    "idIbge": 520008
+}

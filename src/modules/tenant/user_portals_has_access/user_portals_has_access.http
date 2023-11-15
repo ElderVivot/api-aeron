@@ -1,0 +1,53 @@
+# index
+GET http://localhost:3001/v1/user_portals_has_access HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# show
+GET http://localhost:3001/v1/user_portals_has_access/62839343-3c36-4dbc-b7bb-7fead669a394 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# store
+POST http://localhost:3001/v1/user_portals_has_access HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "idTypeAccessPortals": "e72f106e-0287-4cce-a853-ce49bfdd5b4c",
+    "idAccessPortals": "8ed88420-4491-444d-ae6e-84d588816119",
+    "idCertificate": "",
+    "nameCompanie": "EMPRESA 4",
+    "status": "ACTIVE",
+    "stateRegistration": "1234567",
+    "cityRegistration": "",
+    "federalRegistration": "",
+    "nameCity": "GOIANIA",
+    "dateStartAccess": "2022-01-01",
+    "dateEndAccess": "2022-12-01"
+}
+
+###
+
+# destroy
+DELETE http://localhost:3001/v1/user_portals_has_access/4c3ce9c6-68cf-4892-86bd-4d99cb171929 HTTP/1.1
+tenant: 96c6f0ba-8310-4
+
+###
+
+# update
+PUT http://localhost:3001/v1/user_portals_has_access/62839343-3c36-4dbc-b7bb-7fead669a394 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "idTypeAccessPortals": "6a009e00-47b0-4e45-a28f-87a3481b2060",
+    "nameAccess": "ACESSO 2",
+    "login": "03807159200",
+    "password": "senha",
+    "status": "ACTIVE"
+}

@@ -1,0 +1,13 @@
+POST http://localhost:3001/v1/auth/signin HTTP/1.1
+content-type: application/json
+
+{
+    "username": "eldervivot",
+    "password": "Abc@!2022"
+}
+
+###
+
+POST http://localhost:3001/v1/auth/get_data_user HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklkIjoiZjg0MjFhNjMtMzliNS00NTcyLTk2NjQtOWFhNTQyNTA1MDE0IiwiaWF0IjoxNjY5NTU3MjM4LCJleHAiOjE2Njk1NjQ0Mzh9.NwpsemwP1kxYkKRbyZ7Don9Op8lje0PZCD4rdUJXGoc

@@ -1,0 +1,1 @@
+{"version":3,"file":"user-permissions.entity.js","sourceRoot":"","sources":["../../../../src/modules/public/user_client/user-permissions.entity.ts"],"names":[],"mappings":";;;AAAA,+BAAiC;AAEjC,MAAa,qBAAqB;IAQ9B;QACI,IAAI,CAAC,IAAI,CAAC,iBAAiB,EAAE;YACzB,IAAI,CAAC,iBAAiB,GAAG,IAAA,SAAI,GAAE,CAAA;SAClC;IACL,CAAC;CACJ;AAbD,sDAaC"}

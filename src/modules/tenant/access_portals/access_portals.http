@@ -1,0 +1,61 @@
+# index
+GET http://localhost:3001/v1/access_portals?_page=1&_limit=1 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# show
+GET http://localhost:3001/v1/access_portals/62839343-3c36-4dbc-b7bb-7fead669a394 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# showWithDecryptPassword
+GET http://localhost:3001/v1/access_portals/62839343-3c36-4dbc-b7bb-7fead669a394/show_with_decrypt_password HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# store
+POST http://localhost:3001/v1/access_portals HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "idTypeAccessPortals": "6a009e00-47b0-4e45-a28f-87a3481b2060",
+    "nameAccess": "ACESSO 2",
+    "login": "05199481345",
+    "password": "senha123",
+    "status": "ACTIVE"
+}
+
+###
+
+# destroy
+DELETE http://localhost:3001/v1/access_portals/4c3ce9c6-68cf-4892-86bd-4d99cb171929 HTTP/1.1
+tenant: 96c6f0ba-8310-4
+
+###
+
+# update
+PUT http://localhost:3001/v1/access_portals/8ed88420-4491-444d-ae6e-84d588816119 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "idTypeAccessPortals": "6a009e00-47b0-4e45-a28f-87a3481b2060",
+    "nameAccess": "ACESSO 2",
+    "login": "03807159200",
+    "password": "senha",
+    "status": "ACTIVE"
+}
+
+###
+
+# update
+PUT http://localhost:3001/v1/access_portals/8ed88420-4491-444d-ae6e-84d588816119/password_incorrect HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4

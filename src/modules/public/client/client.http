@@ -1,0 +1,71 @@
+# index
+GET http://localhost:3001/v1/client?federalRegistration=22222222000133&name=VIVOT HTTP/1.1
+content-type: application/json
+
+###
+
+# show
+GET http://localhost:3001/v1/client/4a37a16e-59fc-458a-beef-a5431b28f18c HTTP/1.1
+content-type: application/json
+
+###
+
+# store
+POST http://localhost:3001/v1/client HTTP/1.1
+content-type: application/json
+
+{
+    "name": "VIVOT SOFTWARE",
+    "nickName": "SOFTWARE",
+    "typeFederalRegistration": "cnpj",
+    "federalRegistration": "22222222000133",
+    "dddPhone": 62,
+    "phone": "3333333",
+    "email": "software@mail.com",
+    "idIbgeCity": 520008,
+    "neighborhood": "",
+    "street": "",
+    "zipCode": "",
+    "complement": "",
+    "referency": "",
+    "dateAsClient": "2021-01-01"
+}
+
+###
+
+# destroy
+DELETE http://localhost:3001/v1/client/c1d87299-dc3c-4fb5-a6de-f6464db52511 HTTP/1.1
+
+###
+
+# update
+PUT http://localhost:3001/v1/client/9fb6df19-ebc0-447e-a623-260f92183d1c HTTP/1.1
+content-type: application/json
+
+{
+    "name": "VIVOT SOFTWARE 1",
+    "typeFederalRegistration": "cnpj",
+    "federalRegistration": "22222222000244",
+    "dddPhone": 62,
+    "phone": "3333333",
+    "email": "software2@mail.com",
+    "nickName": "VIVOT",
+    "idIbgeCity": 520008,
+    "neighborhood": "",
+    "street": "",
+    "zipCode": "",
+    "complement": "",
+    "referency": "",
+    "status": "INACTIVE",
+    "dateAsClient": "2020-01-01"
+}
+
+###
+
+# addUsers
+PATCH  http://localhost:3001/v1/client/5af0d6b8-254e-4474-8f3d-a7222aacd3c2/add_users HTTP/1.1
+content-type: application/json
+
+{
+    "usersId": ["a80b274a-62ed-4617-8871-1a4688b21fc5"]
+}

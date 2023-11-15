@@ -1,0 +1,1 @@
+{"version":3,"file":"log-nota-fiscal.entity.js","sourceRoot":"","sources":["../../../../src/modules/tenant/log_nota_fiscal/log-nota-fiscal.entity.ts"],"names":[],"mappings":";;;AAAA,+BAAiC;AAIjC,MAAa,aAAa;IAsBtB;QACI,IAAI,CAAC,IAAI,CAAC,eAAe,EAAE;YACvB,IAAI,CAAC,eAAe,GAAG,IAAA,SAAI,GAAE,CAAA;SAChC;IACL,CAAC;CACJ;AA3BD,sCA2BC"}

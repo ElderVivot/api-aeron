@@ -1,0 +1,11 @@
+# index
+GET http://localhost:3000/v1/migrations_executed?createdAt=2021-09-19 HTTP/1.1
+content-type: application/json
+
+###
+
+# show
+GET http://localhost:3000/v1/migrations_executed/1 HTTP/1.1
+content-type: application/json
+
+###

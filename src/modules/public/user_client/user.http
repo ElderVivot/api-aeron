@@ -1,0 +1,82 @@
+# index
+GET http://localhost:3001/v1/user_client/5af0d6b8-254e-4474-8f3d-a7222aacd3c2/list_users?name=Dias HTTP/1.1
+content-type: application/json
+
+###
+# get_list_username
+GET http://localhost:3001/v1/user_client/elder/get_list_username HTTP/1.1
+content-type: application/json
+
+###
+# show
+GET http://localhost:3001/v1/user_client HTTP/1.1
+content-type: application/json
+
+{
+    "username": "eldervivot"
+}
+
+###
+# store
+POST http://localhost:3001/v1/user_client HTTP/1.1
+content-type: application/json
+
+{
+    "username": "eldervivot4",
+    "email": "elder1@email.com",
+    "name": "Elder Vivot",
+    "nickName": "",
+    "dddPhone": 62,
+    "phone": "988776655",
+    "departaments": "fiscal,contabil",
+    "isUserMain": false,
+    "tenantQueroConhecer": "abc",
+    "dataListPermissions": [{
+        "functionality": "rotinas_fixa",
+        "permissions": "criar"
+    }]
+}
+
+###
+# confirmRegistration
+PUT http://localhost:3001/v1/user_client/f8421a63-39b5-4572-9664-9aa542505014/confirm_registration HTTP/1.1
+content-type: application/json
+
+{
+    "password": "Abc@!2022",
+    "email": "elder1@email.com",
+    "name": "Elder",
+    "nickName": "",
+    "dddPhone": 62,
+    "phone": "988776655"
+}
+
+###
+# update
+PUT http://localhost:3001/v1/user_client/a80b274a-62ed-4617-8871-1a4688b21fc5 HTTP/1.1
+content-type: application/json
+
+{
+    "active": true,
+    "email": "elder1@email.com",
+    "name": "Elder Dias",
+    "nickName": "",
+    "dddPhone": 62,
+    "phone": "988776655",
+    "departaments": "fiscal,contabil,folha",
+    "isUserMain": "true"
+}
+
+###
+# sendInformationToResetPassword
+POST http://localhost:3001/v1/user_client/eldervivot/send_reset_password HTTP/1.1
+content-type: application/json
+
+###
+# resetPassword
+PATCH http://localhost:3001/v1/user_client/c5ceced7-612a-40f6-a881-bf183f5a80cc/reset_password HTTP/1.1
+content-type: application/json
+
+{
+    "password": "Abc@!2021"
+}

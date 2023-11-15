@@ -1,0 +1,82 @@
+# index
+GET http://localhost:3001/v1/certificate HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# index
+GET http://localhost:3001/v1/certificate/list_certificate_not_overdue HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# index
+GET http://localhost:3001/v1/certificate/frontend?statusCert=OVERDUE HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# show
+GET http://localhost:3001/v1/certificate/cfc5c732-634b-45e6-8936-9a2402f72040 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# showWithDecryptPassword
+GET http://localhost:3001/v1/certificate/cfc5c732-634b-45e6-8936-9a2402f72040/show_with_decrypt_password HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+###
+
+# # store
+# POST http://localhost:3001/v1/certificate HTTP/1.1
+# content-type: application/json
+# tenant: 96c6f0ba-8310-4
+
+# {
+#     "idCompanie": "bff71ec2-c27d-4aaa-a7ec-c203948ad568",
+#     "pathCert": "/home/eldervivot/Programming/apis/api-bayhero-db-relational/data/test.pfx",
+#     "password": "Ccb2023*"
+# }
+
+###
+
+#store
+POST http://localhost:3001/v1/certificate HTTP/1.1
+tenant: 96c6f0ba-8310-4
+Content-Type: multipart/form-data; boundary=--WebKitFormBoundary7MA4YWxkTrZu0gW
+
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+content-disposition: form-data;name="password"
+content-type: text/plain;charset=UTF-8
+
+Ccb2023*
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="test.pfx"
+Content-Type: application/pkcs12
+
+< /home/eldervivot/Programming/apis/api-bayhero-db-relational/data/test.pfx
+----WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+
+# destroy
+DELETE http://localhost:3001/v1/certificate/4c3ce9c6-68cf-4892-86bd-4d99cb171929 HTTP/1.1
+tenant: 96c6f0ba-8310-4
+
+###
+
+# update
+PUT http://localhost:3001/v1/certificate/cfc5c732-634b-45e6-8936-9a2402f72040 HTTP/1.1
+content-type: application/json
+tenant: 96c6f0ba-8310-4
+
+{
+    "pathCert": "/home/eldervivot/Programming/microservices/api-bayhero-db-relational/data/certificado_bayhero.pfx",
+    "password": "20062018"
+}

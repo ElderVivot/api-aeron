@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+    app:
+        build: .
+        container_name: api-aeron
+        network_mode: "host"
+        restart: always
+    # nginx:
+    #     image: nginx:1.15-alpine
+    #     ports:
+    #         - "80:80"
+    #         - "443:443"
+    #     restart: always
+    #     volumes:
+    #         - ./data/nginx/conf:/etc/nginx/conf.d/:ro
+    #         - ./data/certbot/www:/var/www/certbot/:ro
+
+    # certbot:
+    #     image: certbot/certbot
+    #     volumes:
+    #         - ./data/certbot/www/:/var/www/certbot/:rw
+    #         - ./data/certbot/conf/:/etc/letsencrypt/:rw

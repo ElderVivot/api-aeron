@@ -1,0 +1,23 @@
+# index
+GET http://localhost:3001/v1/quero_conhecer HTTP/1.1
+content-type: application/json
+
+###
+
+# show
+GET http://localhost:3001/v1/quero_conhecer/4a37a16e-59fc-458a-beef-a5431b28f18c HTTP/1.1
+content-type: application/json
+
+###
+
+# store
+POST http://localhost:3001/v1/quero_conhecer HTTP/1.1
+content-type: application/json
+
+{
+    "name": "VIVOT SOFTWARE",
+    "email": "software@mail.com",
+    "phone": "623333333",
+    "companie": "DEV COMPANIE",
+    "occupation": "owner"
+}

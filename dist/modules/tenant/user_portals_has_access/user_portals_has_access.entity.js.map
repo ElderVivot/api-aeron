@@ -1,0 +1,1 @@
+{"version":3,"file":"user_portals_has_access.entity.js","sourceRoot":"","sources":["../../../../src/modules/tenant/user_portals_has_access/user_portals_has_access.entity.ts"],"names":[],"mappings":";;;AAAA,+BAAiC;AAIjC,MAAa,oBAAoB;IAgB7B;QACI,IAAI,CAAC,IAAI,CAAC,sBAAsB,EAAE;YAC9B,IAAI,CAAC,sBAAsB,GAAG,IAAA,SAAI,GAAE,CAAA;SACvC;IACL,CAAC;CACJ;AArBD,oDAqBC"}

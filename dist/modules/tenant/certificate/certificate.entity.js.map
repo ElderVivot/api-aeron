@@ -1,0 +1,1 @@
+{"version":3,"file":"certificate.entity.js","sourceRoot":"","sources":["../../../../src/modules/tenant/certificate/certificate.entity.ts"],"names":[],"mappings":";;;AAAA,+BAAiC;AAEjC,MAAa,WAAW;IAepB;QACI,IAAI,CAAC,IAAI,CAAC,aAAa,EAAE;YACrB,IAAI,CAAC,aAAa,GAAG,IAAA,SAAI,GAAE,CAAA;SAC9B;IACL,CAAC;CACJ;AApBD,kCAoBC"}
